@@ -1,0 +1,27 @@
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Ordenar por</label>
+    <select class="form-control" id="exampleFormControlSelect1" (change)="FiltroOrdenar($event.target.value)">
+        <option value="1">De la A - Z</option>
+        <option value="2">De la Z - A</option>
+        <option value="3">Precio Mayor</option>
+        <option value="4">Precio Menor</option>
+        <option value="5">Mas reciente</option>
+    </select>
+</div>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Cateogrias</strong></li>
+    <li class="list-group-item" (click)="SelectCategory(-1)">
+        <a href="javascript:void(0)" (click)="SelectCategory(-1)">
+            Todo los productos
+        </a></li>
+    <li class="list-group-item" *ngFor="let item of ObjCategory">
+        <div class="form-check">
+            <a href="javascript:void(0)" (click)="SelectCategory(item)">
+                {{item.nameCategory}}
+            </a>
+        </div>
+    </li>
+</ul>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white"></p>
+</ngx-spinner>

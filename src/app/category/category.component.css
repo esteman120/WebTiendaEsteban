@@ -1,0 +1,8 @@
+.alink {
+    color: #007bff;
+}
+
+.alink :hover {
+    text-decoration: underline;
+    color: #007bff;
+}
