@@ -159,7 +159,7 @@ export class CustomerComponent implements OnInit {
     this.SendInfo(ObjCustomer, template);
   }
 
-  SendInfo(ObjCustomer, template) {
+  SendInfo(ObjCustomer, template) { 
     this.service.SaveCustomer(ObjCustomer).then(
       (res) => {
         if (res["mensaje"] !== "") {
